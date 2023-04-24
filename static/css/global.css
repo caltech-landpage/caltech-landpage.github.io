@@ -1,0 +1,1050 @@
+/* Roboto Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/* Variáveis de cores */
+
+:root {
+    --main-cal-color: #e23611;
+    --main-cal-color-shadow: #c02e0d;
+    --second-cal-color: #f78c13;
+
+    --main-white: #ffffff;
+    --second-white: #f2f2f2;
+    --third-white: #ffffffb0;
+
+    --main-gray: #a2a2a2;
+
+    --main-black: #000000;
+    --second-black: #202020;
+
+    --shadow-color: #02020235;
+    --shadow-second-color: #02020220;
+    --shadow-third-color: #02020250;
+}
+
+/*********************************/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: 'Roboto', sans-serif;
+
+    padding: 0;
+    margin: 0;
+}
+
+/* Primeiro container da página - Formulário */
+
+.first-container {
+    display: flex;
+    justify-content: space-around;
+
+    padding: 80px 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../img/main-img.png);
+}
+
+@media (max-width: 1200px) {
+    .first-container {
+        background-image: url();
+    }
+}
+
+/* Fontes diferenciada em títulos */
+
+.title-font,
+.condominium-title>b {
+    line-height: 2.2vw;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+@media (max-width: 1366px) {
+    .title-font{
+        line-height: 4vw;
+    }
+}
+
+/* Segundo container da página - Contact me */
+
+.second-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    background-color: var(--second-white);
+    padding: 60px 0;
+}
+
+.help-me-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.help-me-title {
+    margin: 30px 0;
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.help-me-text {
+    font-size: 20px;
+}
+
+.help-me-phone,
+.help-me-whatsapp {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.help-me-icon {
+    font-size: 42px;
+    margin: 10px;
+}
+
+.help-me-subtitle {
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.help-me-subinfo {
+    margin: 10px 0;
+    text-decoration: none;
+    color: var(--main-black);
+}
+
+.subinfo-link:hover {
+    text-decoration: underline;
+}
+
+.help-me-form {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+
+    .title-font,
+    .condominium-title>b {
+        line-height: 6vw;
+    }
+
+    .second-container {
+        flex-direction: column;
+        padding: 60px 0;
+        align-items: center;
+    }
+
+    .help-me-title {
+        margin: 10px 0;
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .help-me-text {
+        margin: 10px 0 40px 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .help-me-phone,
+    .help-me-whatsapp {
+        display: none;
+    }
+
+    .help-me-form>.form-title {
+        width: 75vw;
+        font-size: 38px;
+    }
+
+    .help-me-form>.form-input {
+        width: 70vw;
+    }
+
+    .help-me-form>.form-time {
+        width: 56vw;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .title-font,
+    .condominium-title>b {
+        line-height: 10vw;
+    }
+
+    .help-me-title {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .help-me-text {
+        margin: 10px 0 40px 0;
+        font-size: 18px;
+    }
+
+    .help-me-form {
+        width: 80vw;
+    }
+}
+
+/* Condomínios */
+
+.condominium-title {
+    margin: 0;
+    width: 60vw;
+    padding-top: 50px;
+
+    font-size: 42px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.condominium-title>b {
+    font-weight: 800;
+}
+
+.condominium-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-white);
+}
+
+.condominium-big-card {
+    display: flex;
+    flex-direction: column;
+
+    margin: 40px 0;
+    padding: 20px;
+
+    width: 50vw;
+    height: 520px;
+}
+
+.condominium-img {
+    display: flex;
+    justify-content: center;
+}
+
+.condominium-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.big-card-bar-logo {
+    display: flex;
+    justify-content: center;
+
+    padding: 12px 0;
+    background-color: var(--second-black);
+}
+
+.big-card-info-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 22px 20px;
+
+    background-color: var(--second-white);
+    box-shadow: 8px 12px 24px var(--shadow-color);
+}
+
+.big-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+.big-card-info-tags {
+    margin: 0;
+    padding: 12px 18px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--main-white);
+    background-color: var(--main-cal-color);
+}
+
+.big-card-info-tags>p {
+    margin: 0;
+    padding: 0;
+}
+
+.big-card-info-name {
+    margin: 25px 0 15px 0;
+    padding: 0;
+
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--main-cal-color);
+}
+
+.big-card-info-name>p {
+    margin: 0;
+    padding: 0;
+}
+
+.big-card-info-desc {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.big-card-info-desc>p {
+    margin: 0;
+    padding: 0;
+}
+
+.big-card-info-location {
+    font-size: 15px;
+    font-weight: 600;
+
+    margin: 20px 0;
+}
+
+.big-card-info-location>p {
+    margin: 0;
+    padding: 0;
+}
+
+.big-card-info-button {
+    text-decoration: none;
+    color: var(--main-black);
+
+    margin: 0;
+    padding: 12px 20px;
+    border: 1px solid var(--main-black);
+
+    transition: all 0.25s ease 0s;
+}
+
+.big-card-info-button:hover {
+    color: var(--main-white);
+    background-color: var(--main-black);
+}
+
+.big-card-info-button>p {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 1366px) {
+    .condominium-big-card{
+        width: 70vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .condominium-title {
+        width: 76vw;
+        padding-top: 50px;
+
+        font-size: 38px;
+        font-weight: 300;
+    }
+
+    .condominium-title>b {
+        font-weight: 800;
+    }
+
+    .big-card-info-main {
+        flex-direction: column;
+        padding: 0 0 32px 0;
+    }
+
+    .condominium-big-card {
+        margin: 40px 0;
+        padding: 20px;
+
+        width: 80vw;
+        height: auto;
+    }
+
+    .big-card-bar-logo>img {
+        width: 8vw;
+        height: auto;
+    }
+
+    .big-card-photos>img {
+        width: 80vw;
+        height: auto;
+    }
+    .big-card-photos>iframe{
+        width: 80vw;
+        height: 432px;
+    }
+
+    .big-card-info-tags {
+        margin-top: -4px;
+        padding: 12px 18px;
+    }
+
+    .big-card-info {
+        padding: 0;
+    }
+
+    .big-card-info-name,
+    .big-card-info-desc,
+    .big-card-info-location {
+        padding: 0 20px;
+    }
+
+    .big-card-info-button {
+        margin: 0 20px;
+        color: var(--main-white);
+        background-color: var(--main-black);
+    }
+}
+
+@media (max-width: 500px) {
+    .condominium-title {
+        width: 80%;
+        padding-top: 30px;
+
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .big-card-photos>iframe{
+        width: 80vw;
+        height: 219px;
+    }
+
+    .condominium-big-card {
+        margin: 20px 0;
+    }
+
+    .big-card-info-main {
+        text-align: center;
+    }
+}
+
+/* Cartões pequenos */
+
+.condominium-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    padding: 30px 0 40px 0;
+}
+
+.condominium-card {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    width: 280px;
+    height: auto;
+    margin: 20px;
+    padding-bottom: 20px;
+    background-color: var(--second-white);
+
+    text-decoration: none;
+    color: var(--main-black);
+    box-shadow: 8px 12px 24px var(--shadow-color);
+
+    transition: all 0.25s ease 0s;
+}
+
+.condominium-card:hover {
+    scale: 95%;
+}
+
+.condominium-tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: -5px 0;
+    color: var(--main-white);
+    background-color: var(--main-cal-color);
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.condominium-tags>p {
+    margin: 0;
+    padding: 10px 20px;
+    
+}
+
+.condominium-name,
+.condominium-desc,
+.condominium-address {
+    padding: 0 20px;
+}
+
+.condominium-name {
+    padding: 20px 20px 0px 20px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.condominium-name>p {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1366px) {
+    .condominium-cards {
+        padding: 0 0 40px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .condominium-cards {
+        padding: 0 0 40px 0;
+    }
+}
+
+/* Detalhes do condomínio */
+
+.condominium-details-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.condominium-details-main-img {
+    display: flex;
+    justify-content: center;
+
+    height: auto;
+    max-width: 100%;
+}
+
+.condominium-details-main-tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: -60px 0 40px 0;
+    padding: 20px 20px 20px 20px;
+
+    color: var(--main-white);
+    background-color: var(--main-cal-color);
+    box-shadow: 0px 8px 24px var(--shadow-color);
+
+    transition: all 0.25s ease 0s;
+}
+
+.condominium-details-main-tags:hover {
+    scale: 98%;
+}
+
+.condominium-details-main-text-title {
+    font-size: 46px;
+    font-weight: 300;
+
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.condominium-details-main-tags-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0 10px;
+
+    width: 8vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+.condominium-details-main-tags-info>p {
+    padding: 0;
+    margin: 0;
+}
+
+.condominium-details-main-tags-icons {
+    font-size: 1.5vw;
+    padding: 0 0 10px 0;
+}
+
+.condominium-details-main-tags-icons>* {
+    padding: 0 0 10px 0;
+}
+
+.condominium-details-main-text-desc {
+    width: 1000px;
+    font-size: larger;
+    font-weight: 400;
+
+    padding: 0;
+    margin: 0 0 80px 0;
+}
+
+@media (max-width: 1200px) {
+    .condominium-details-main-img>div>img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .condominium-details-main-tags-info {
+        width: 15vw;
+    }
+
+    .condominium-details-main-tags-icons {
+        font-size: 4vw;
+    }
+
+    .condominium-details-main-tags-info>p {
+        font-size: 2vw;
+    }
+
+    .condominium-details-main-img {
+        width: auto;
+        height: auto;
+    }
+
+    .condominium-details-main-text-title {
+        width: 75vw;
+    }
+
+    .condominium-details-main-text-desc {
+        width: 75vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .condominium-details-main-tags {
+        display: none;
+    }
+
+    .condominium-details-main-text-title {
+        margin-top: 10vw;
+    }
+}
+
+/* Depoimentos */
+
+.testimony-videos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 2vw 0;
+    background-color: var(--main-cal-color);
+}
+
+.testimony-videos-frames{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.testimony-videos-title{
+    font-size: 42px;
+    font-weight: 300;
+    text-align: center;
+    
+    padding: 0;
+    color: var(--main-white);
+}
+
+.testimony-video-frame{
+    padding: 0;
+    margin: 2vw;
+}
+
+
+@media (max-width: 1200px) {
+    .testimony-videos{
+        padding: 4vw 0;
+    }
+    
+    .testimony-videos-title{
+        width: 85%;
+        font-size: 38px;
+    }
+    
+    iframe{
+        width: 95%;
+        height: auto;
+    }
+}
+
+/* Formulários */
+
+.form-base {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px;
+    width: 30vw;
+
+    border-radius: 20px;
+    background-color: var(--second-white);
+    box-shadow: 8px 12px 24px var(--shadow-color);
+}
+
+.form-content {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-title {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 24px;
+    color: var(--main-cal-color);
+}
+
+.form-label {
+    width: 25vw;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 25vw;
+    font-size: 18px;
+    margin-bottom: 12px;
+
+    padding: 8px;
+    border: none;
+    background-color: var(--main-white);
+    border-bottom: 2px solid var(--main-cal-color);
+}
+
+.form-input:focus,
+.form-message:focus {
+    outline: none;
+}
+
+.form-time {
+    width: 10vw;
+    font-size: 18px;
+    padding: 8px 32px 8px 12px;
+
+    border: none;
+    margin-bottom: 24px;
+    background-color: var(--main-white);
+    border-bottom: 2px solid var(--main-cal-color);
+}
+
+.form-message {
+    resize: none;
+    border: none;
+    padding: 8px;
+
+    font-size: 18px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--main-cal-color);
+}
+
+.form-button {
+    border: none;
+    font-size: 20px;
+    padding: 12px 24px;
+
+    color: var(--main-white);
+    background-color: var(--main-cal-color);
+
+    transition: all 0.4s ease 0s;
+}
+
+.form-button:hover {
+    color: var(--main-white);
+    background-color: var(--main-cal-color-shadow);
+
+    padding: 12px 36px;
+    cursor: pointer;
+}
+
+@media (max-width: 1366px) {
+    .form-base{
+        width: 40vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form-base {
+        width: 60vw;
+        padding: 70px;
+    }
+
+    .form-title {
+        width: 75vw;
+        font-size: 38px;
+    }
+
+    .form-input {
+        width: 60vw;
+    }
+
+    .form-label {
+        width: 60vw;
+    }
+
+    .form-time {
+        width: 30vw;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .form-base {
+        width: 50vw;
+    }
+
+    .form-title {
+        font-size: 28px;
+    }
+}
+
+/* Rodapé */
+
+.footer-base {
+    display: flex;
+    justify-content: center;
+
+    color: var(--main-white);
+    background-color: var(--second-black);
+}
+
+.footer-address-title,
+.footer-contacts-title {
+    margin: 12px 0;
+    padding: 12px 0;
+    font-size: 36px;
+    font-weight: 300;
+
+    border-bottom: 2px solid var(--main-white);
+}
+
+.footer-address-text>p {
+    margin: 6px 0;
+}
+
+.footer-address,
+.footer-contacts {
+    padding: 40px 0;
+    margin: 0 5vw;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 18px;
+}
+
+.footer-contacts-link {
+    padding: 6px 0;
+    margin-bottom: 6px;
+    text-decoration: none;
+
+    color: var(--third-white);
+    transition: all 0.4s ease 0s;
+}
+
+.footer-contacts-link:hover {
+    color: var(--main-white);
+}
+
+@media (max-width: 1200px) {
+    .footer-base {
+        flex-wrap: wrap;
+    }
+
+    .footer-address,
+    .footer-contacts {
+        padding: 6vw 0 6vw 0;
+    }
+}
+
+/* Créditos */
+
+.footer-credits {
+    margin: 0;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--main-black);
+}
+
+.footer-credits-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--main-white);
+}
+
+/* Navbar */
+
+.navbar-base {
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 0;
+    background-color: var(--main-black);
+}
+
+@media (max-width: 1200px) {
+    .navbar-base>picture>img {
+        width: 10vw;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-base>picture>img {
+        width: 16vw;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Mid-bar */
+
+.mid-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: var(--main-cal-color);
+}
+
+.mid-bar-link-text {
+    display: flex;
+    padding: 24px 60px;
+
+    font-weight: 800;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--main-white);
+
+    transition: all 0.3s ease 0s;
+}
+
+.mid-bar-link-text:hover {
+    background-color: var(--shadow-second-color);
+}
+
+@media (max-width: 1200px) {
+    .mid-bar {
+        height: auto;
+        max-width: 100%;
+        justify-content: space-around;
+    }
+
+    .mid-bar-link-text {
+        font-size: 12px;
+        padding: 20px 10px;
+    }
+}
+
+/* Ícone do whatsapp */
+
+.whatsapp-button {
+    right: 30px;
+    bottom: 30px;
+    position: fixed;
+
+    background-color: #12ee12;
+    box-shadow: 4px 8px 18px var(--shadow-third-color);
+
+    font-size: 40px;
+    border-radius: 100%;
+
+    transition: all 0.3s ease 0s;
+}
+
+.whatsapp-button:hover {
+    bottom: 40px;
+    box-shadow: 0 0 24px #12ee1298;
+}
+
+.whatsapp-icon {
+    margin: 5px 0 0 0;
+    padding: 15px 20px;
+    color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .whatsapp-button {
+        right: 6vw;
+        position: fixed;
+    }
+}
+
+/* Botões carrossel */
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    /* Deixa o botão em cima da imagem */
+    top: 1vw;
+    margin-bottom: -58px;
+    position: relative;
+
+    z-index: 9999;
+    font-size: 38px;
+    border-radius: 20px;
+    background-color: var(--second-white);
+    box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+.prev-button, .next-button{
+    cursor: pointer;
+    padding: 0 10px;
+    padding-top: 10px;
+
+    border-radius: 20px;
+    transition: all 0.25s ease 0s;
+}
+
+.prev-button:hover, .next-button:hover{
+    background-color: var(--shadow-second-color);
+}
+
+
+@media (max-width: 1200px) {
+    .buttons{
+        margin-top: 0;
+        font-size: 28px;
+        margin-bottom: -45px;
+
+        top: 2vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .buttons{
+        top: 60vw;
+    }
+}
