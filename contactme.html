@@ -46,28 +46,28 @@
                 </div>
             </span>
         </div>
-        <form class="help-me-form" action="/" method="post">
-            <label class="form-label" for="name"><ion-icon name="person"></ion-icon> Nome Completo:</label>
-            <input class="form-input" type="text" id="name" name="name" minlength="4" maxlength="60" size="64" required>
-            <label class="form-label" for="email"><ion-icon name="mail"></ion-icon> Email:</label>
-            <input class="form-input" type="email" id="email" name="email" required>
-            <label class="form-label" for="phone"><ion-icon name="call"></ion-icon> Número:</label>
-            <input class="form-input" type="tel" id="phone" name="phone" required>
-            <label class="form-label" for="time"><ion-icon name="business"></ion-icon> Assunto:</label>
-            <select class="form-time" name="time" id="time">
-                <option value="smart_derby">Smart Derby</option>
-                <option value="edmundo_linhares">Edmundo Linhares</option>
-                <option value="derby_prime">Derby Prime</option>
-                <option value="gustavo_belchior">Gustavo Belchior</option>
-            </select>
-            <label class="form-label" for="time"><ion-icon name="people"></ion-icon> Já é cliente Caltech?</label>
-            <select class="form-time" name="time" id="time">
-                <option value="manha">Sim</option>
-                <option value="tarde">Não</option>
-            </select>
-            <label class="form-label" for="message"><ion-icon name="chatbox-ellipses"></ion-icon> Mensagem:</label>
-            <textarea class="form-message" name="message" id="message" cols="40" rows="10"></textarea>
-            <button class="form-button" type="submit">Enviar</button>
+        <form class="form-base" action="https://api.staticforms.xyz/submit" method="post" id="lead-form">
+            <h1 class="form-title title-font medium-screen-title">
+                Venha investir ou morar no SMARTDERBY!
+            </h1>
+            <div class="form-content">
+                <input type="hidden" name="accessKey" value="b3163427-65aa-4751-bc28-d83648844c45"> <!-- Required -->
+                <label class="form-label" for="name"><ion-icon name="person"></ion-icon> Nome (4 a 8 caractéres)</label>
+                <input class="form-input" type="text" id="name" name="name" minlength="4" maxlength="60" size="64" required>
+                <label class="form-label" for="email"><ion-icon name="mail"></ion-icon> Email</label>
+                <input class="form-input" type="email" id="email" name="email" required>
+                <label class="form-label" for="phone"><ion-icon name="call"></ion-icon> Número</label>
+                <input class="form-input" type="tel" id="phone" name="phone" required>
+                <label class="form-label" for="time"><ion-icon name="time"></ion-icon>
+                        Qual o melhor horário para entrarmos em contato?
+                </label>
+                <select class="form-time" name="$time" id="time">
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">Noite</option>
+                </select>
+            </div>
+            <button class="form-button" type="submit" value="Submit">Enviar</button>
         </form>
     </div>
     <footer class="footer-base">
@@ -93,11 +93,37 @@
     </footer>
 
     <script src="js/script.js" target="_blank"></script>
-    <!-- Form integration script -->                                                                                                                                                                                                                                                                                     
-    <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/32ddb43e-aa25-4b64-b333-bad73bc9c76c-loader.js"></script>                                                                                                                                                           
-    <!-- https://ionic.io/ionicons/usage -->                                                                                                                                                                                                                                                                             
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>                                                                                                                                                                                                                 
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>                                                                                                                                                                                                                          
-</body>                                                                                                                                                                                                                                                                                                                  
-                                                                                                                                                                                                                                                                                                                         
+    <!-- Form integration script -->
+    <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/32ddb43e-aa25-4b64-b333-bad73bc9c76c-loader.js"></script>
+    <!-- https://ionic.io/ionicons/usage -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        const form = document.getElementById('lead-form');
+        form.addEventListener('submit', (event) => {
+          // prevent the default form submission behavior
+          event.preventDefault();
+    
+          // get the form data as a URL-encoded string
+          const formData = new URLSearchParams(new FormData(form)).toString();
+    
+          // send the form data to the server
+          fetch('/submit-form', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            }
+          })
+          .then(() => {
+            // redirect the user back to the index.html file
+            window.location.href = 'index.html';
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+        });
+    </script>
+
+</body>
 </html>
