@@ -44,7 +44,7 @@
     <div class="mid-bar">
         <a href="https://api.whatsapp.com/send?phone=558894777444&text=Gostaria%20de%20falar%20sobre%20os%20impreendimentos%20da%20caltech%20Engenharia!"
             class="mid-bar-link-text" target="_blank">Whatsapp</a>
-        <a href="{% url 'landpage:contactme-view' %}" class="mid-bar-link-text" target="_blank">Envie uma mensagem</a>
+        <a href="contactme.html" class="mid-bar-link-text" target="_blank">Envie uma mensagem</a>
         <a href="https://www.google.com/maps/place/Ed.+Smart+Derby+-+Caltech+Engenharia/@-3.6823381,-40.3389929,15z/data=!4m2!3m1!1s0x0:0xe674467e104b13c8?sa=X&ved=2ahUKEwjt6avOqoz-AhVvCbkGHZcwDfcQ_BJ6BAhLEAg"
             class="mid-bar-link-text" target="_blank">Nossa localização</a>
     </div>
@@ -117,7 +117,49 @@
                 <p><ion-icon name="location"></ion-icon>R. Dina Mendes, 631 - Derby Clube, Sobral - CE, 62042-220</p>
             </span>
          </a>
-        </div>
+         <a href="{% url 'landpage:condominio-view' condominio.pk %}" class="condominium-card">
+            <picture class="condominium-img">
+                <img src="static/img/miniature-img_DcZpYJd.jpg" alt="Imagem do condomínio" draggable="false">
+            </picture>
+            <span class="condominium-tags">
+                <p>Um paraíso no melhor bairro de Sobral</p>
+            </span>
+            <span class="condominium-name">
+                <p>
+                    Edmundo Linhares
+                </p>
+            </span>
+            <span class="condominium-desc">
+                <p>
+		    Apartamentos espaçosos, com acabamentos de alta qualidade, em um condomínio de luxo.
+                </p>
+            </span>
+            <span class="condominium-address">
+                <p><ion-icon name="location"></ion-icon>Av. Gerardo Rangel, 500 - Derby Clube, Sobral - CE, 62041-380</p>
+            </span>
+         </a>
+         <a href="{% url 'landpage:condominio-view' condominio.pk %}" class="condominium-card">
+            <picture class="condominium-img">
+                <img src="static/img/miniature-img_DcZpYJd.jpg" alt="Imagem do condomínio" draggable="false">
+            </picture>
+            <span class="condominium-tags">
+                <p>Viva com conforto e qualidade de vida</p>
+            </span>
+            <span class="condominium-name">
+                <p>
+                    Gustavo Belchior
+                </p>
+            </span>
+            <span class="condominium-desc">
+                <p>
+		    Descubra um estilo de vida exclusivo em nosso condomínio de alto padrão, com infraestrutura 
+		    completa e áreas de lazer para toda a família desfrutar.
+                </p>
+            </span>
+            <span class="condominium-address">
+                <p><ion-icon name="location"></ion-icon>Av. Dr. Guarani, 115 - Centro, Sobral - CE, 62010-330</p>
+            </span>
+         </a>
     </div>
     <div class="testimony-videos">
         <h2 class="testimony-videos-title">
@@ -184,10 +226,10 @@
             <input class="form-input" type="tel" id="phone" name="phone" required>
             <label class="form-label" for="time"><ion-icon name="business"></ion-icon> Assunto:</label>
             <select class="form-time" name="time" id="time">
-                <option value="Smart Derby">smart_derby</option>
-                <option value="Edmundo Linhares">edmundo_linhares</option>
-                <option value="Derby Prime">derby_prime</option>
-                <option value="Gustavo Belchior">gustavo_belchior</option>
+                <option value="smart_derby">Smart Derby</option>
+                <option value="edmundo_linhares">Edmundo Linhares</option>
+                <option value="derby_prime">Derby Prime</option>
+                <option value="gustavo_belchior">Gustavo Belchior</option>
             </select>
             <label class="form-label" for="time"><ion-icon name="people"></ion-icon> Já é cliente Caltech?</label>
             <select class="form-time" name="time" id="time">

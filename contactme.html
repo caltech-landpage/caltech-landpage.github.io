@@ -1,0 +1,103 @@
+<!DOCTYPE html>    
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caltech | Entre em contato</title>
+    <link rel="stylesheet" href="static/css/global.css">
+</head>
+
+<body>
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=558894777444&text=Gostaria%20de%20falar%20sobre%20os%20impreendimentos%20da%20caltech%20Engenharia!" target="_blank"><ion-icon name="logo-whatsapp" class="whatsapp-icon"></ion-icon></a>
+    </div>
+    <div class="navbar-base">
+        <a href ="{% url 'landpage:homepage-view' %}" class="logo-img">
+            <img src="static/img/caltech-logo-xxsmall.png" alt="Logo da Caltech" draggable="false">
+        </a>
+    </div>
+    <div class="second-container">
+        <div class="help-me-info">
+            <h2 class="help-me-title">Quer saber mais?</h2>
+            <p class="help-me-text">
+                Entre em contato com a nossa<br>
+                equipe de corretores e agende sua<br>
+                visita aos nossos empreendimentos.
+            </p>
+            <span class="help-me-phone">
+                <div class="help-me-icon">
+                    <ion-icon name="call-outline"></ion-icon>
+                </div>
+                <div>
+                    <p class="help-me-subtitle">Ligue agora</p>
+                    <p class="help-me-subinfo">+55 (88) 9477-7444</p>
+                </div>
+            </span>
+            <span class="help-me-whatsapp">
+                <div class="help-me-icon">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </div>
+                <div>
+                    <p class="help-me-subtitle">Tire suas dúvidas rapidamente</p>
+                    <a href="https://api.whatsapp.com/send?phone=558894777444&text=Gostaria%20de%20falar%20sobre%20os%20impreendimentos%20da%20caltech%20Engenharia!"
+                        class="help-me-subinfo subinfo-link">Contato via whatsapp</a>
+                </div>
+            </span>
+        </div>
+        <form class="help-me-form" action="/" method="post">
+            <label class="form-label" for="name"><ion-icon name="person"></ion-icon> Nome Completo:</label>
+            <input class="form-input" type="text" id="name" name="name" minlength="4" maxlength="60" size="64" required>
+            <label class="form-label" for="email"><ion-icon name="mail"></ion-icon> Email:</label>
+            <input class="form-input" type="email" id="email" name="email" required>
+            <label class="form-label" for="phone"><ion-icon name="call"></ion-icon> Número:</label>
+            <input class="form-input" type="tel" id="phone" name="phone" required>
+            <label class="form-label" for="time"><ion-icon name="business"></ion-icon> Assunto:</label>
+            <select class="form-time" name="time" id="time">
+                <option value="smart_derby">Smart Derby</option>
+                <option value="edmundo_linhares">Edmundo Linhares</option>
+                <option value="derby_prime">Derby Prime</option>
+                <option value="gustavo_belchior">Gustavo Belchior</option>
+            </select>
+            <label class="form-label" for="time"><ion-icon name="people"></ion-icon> Já é cliente Caltech?</label>
+            <select class="form-time" name="time" id="time">
+                <option value="manha">Sim</option>
+                <option value="tarde">Não</option>
+            </select>
+            <label class="form-label" for="message"><ion-icon name="chatbox-ellipses"></ion-icon> Mensagem:</label>
+            <textarea class="form-message" name="message" id="message" cols="40" rows="10"></textarea>
+            <button class="form-button" type="submit">Enviar</button>
+        </form>
+    </div>
+    <footer class="footer-base">
+        <div class="footer-address">
+            <p class="footer-address-title">Onde estamos:</p>
+            <span class="footer-address-text">
+                <p>SOBRAL-CE</p>
+                <p>Derby Clube</p>
+                <p>Caltech - R. Irmã Síria, 60</p>
+                <p>Tel: (88) 9 9477-7444</p>
+            </span>
+        </div>
+        <div class="footer-contacts">
+            <p class="footer-contacts-title">Redes sociais:</p>
+            <a href="https://api.whatsapp.com/send?phone=558894777444&text=Gostaria%20de%20falar%20sobre%20os%20impreendimentos%20da%20caltech%20Engenharia!" class="footer-contacts-link"><ion-icon name="logo-whatsapp"></ion-icon> Whatsapp </a>
+            <a href="https://www.instagram.com/caltechengenharia/" class="footer-contacts-link"><ion-icon name="logo-instagram"></ion-icon> Instagram </a>
+        </div>
+    </footer>
+    <footer class="footer-credits">
+        <span class="footer-credits-text">
+            <p>Created by Seletos Lançamentos. &#169 2023</p>
+        </span>
+    </footer>
+
+    <script src="js/script.js" target="_blank"></script>
+    <!-- Form integration script -->                                                                                                                                                                                                                                                                                     
+    <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/32ddb43e-aa25-4b64-b333-bad73bc9c76c-loader.js"></script>                                                                                                                                                           
+    <!-- https://ionic.io/ionicons/usage -->                                                                                                                                                                                                                                                                             
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>                                                                                                                                                                                                                 
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>                                                                                                                                                                                                                          
+</body>                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                         
+</html>
