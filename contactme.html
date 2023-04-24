@@ -98,32 +98,5 @@
     <!-- https://ionic.io/ionicons/usage -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script>
-        const form = document.getElementById('lead-form');
-        form.addEventListener('submit', (event) => {
-          // prevent the default form submission behavior
-          event.preventDefault();
-    
-          // get the form data as a URL-encoded string
-          const formData = new URLSearchParams(new FormData(form)).toString();
-    
-          // send the form data to the server
-          fetch('/submit-form', {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            }
-          })
-          .then(() => {
-            // redirect the user back to the index.html file
-            window.location.href = 'index.html';
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-        });
-    </script>
-
 </body>
 </html>
