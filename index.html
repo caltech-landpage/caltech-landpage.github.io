@@ -275,8 +275,6 @@
     </footer>
 
     <script src="js/script.js" target="_blank"></script>
-    <!-- Form integration script -->
-    <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/32ddb43e-aa25-4b64-b333-bad73bc9c76c-loader.js"></script>
     <!-- https://ionic.io/ionicons/usage -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -284,5 +282,32 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6ZZBDT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <!-- Avoid JSON file to be shown to user -->
+    <script>
+	    $(document).ready(function() {
+	    $('#myForm').submit(function(event) {
+	    event.preventDefault(); // Prevent the form from submitting normally
+	    
+	    var form = $(this);
+	    var url = form.attr('action');
+	    
+	    $.ajax({
+	      type: 'POST',
+	      url: url,
+	      data: form.serialize(),
+	      dataType: 'json',
+	      success: function(data) {
+		// Handle the success response (e.g., show a success message)
+		alert('Form submitted successfully!');
+		window.location.href = 'main-page.html'; // Redirect to the main page
+	      },
+	      error: function(xhr, status, error) {
+		// Handle the error response (e.g., show an error message)
+		alert('An error occurred while submitting the form. Please try again later.');
+	      }
+	    });
+	    });
+	    });
+    </script>
 </body>
 </html>
