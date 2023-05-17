@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caltech | Entre em contato</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="static/css/global.css">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -75,7 +74,7 @@
                     <option value="noite">Noite</option>
                 </select>
             </div>
-            <button class="form-button" type="submit" value="Submit">Enviar</button>
+            <button class="form-button" type="submit" value="Submit" onclick="window.location.href = 'index.html';">Enviar</button>
         </form>
     </div>
     <footer class="footer-base">
@@ -108,32 +107,5 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6ZZBDT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- Avoid JSON file to be shown to user -->
-    <script>
-	    $(document).ready(function() {
-	    $('#lead-form').submit(function(event) {
-	    event.preventDefault(); // Prevent the form from submitting normally
-	    
-	    var form = $(this);
-	    var url = form.attr('action');
-	    
-	    $.ajax({
-	      type: 'POST',
-	      url: url,
-	      data: form.serialize(),
-	      dataType: 'json',
-	      success: function(data) {
-		// Handle the success response (e.g., show a success message)
-		alert('Formulário enviado com sucesso!');
-		window.location.href = 'index.html'; // Redirect to the main page
-	      },
-	      error: function(xhr, status, error) {
-		// Handle the error response (e.g., show an error message)
-		alert('Um erro ocorreu ao enviar o formulário, tente novamente mais tarde!');
-	      }
-	    });
-	    });
-	    });
-    </script>
 </body>
 </html>
