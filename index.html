@@ -226,7 +226,7 @@
                 </div>
             </span>
         </div>
-        <form class="help-me-form" action="https://api.staticforms.xyz/submit" method="post">
+        <form class="help-me-form" action="https://api.staticforms.xyz/submit" method="post" id="condominium-form">
   	    <input type="hidden" name="accessKey" value="b3163427-65aa-4751-bc28-d83648844c45"> <!-- Required -->
             <label class="form-label" for="name"><ion-icon name="person"></ion-icon> Nome Completo:</label>
             <input class="form-input" type="text" id="name" name="name" minlength="4" maxlength="60" size="64" required>
@@ -285,7 +285,7 @@
     <!-- Avoid JSON file to be shown to user -->
     <script>
 	    $(document).ready(function() {
-	    $('#myForm').submit(function(event) {
+	    $('#lead-form').submit(function(event) {
 	    event.preventDefault(); // Prevent the form from submitting normally
 	    
 	    var form = $(this);
@@ -298,12 +298,39 @@
 	      dataType: 'json',
 	      success: function(data) {
 		// Handle the success response (e.g., show a success message)
-		alert('Form submitted successfully!');
-		window.location.href = 'main-page.html'; // Redirect to the main page
+		alert('Formulário enviado com sucesso!');
+		window.location.href = 'index.html'; // Redirect to the main page
 	      },
 	      error: function(xhr, status, error) {
 		// Handle the error response (e.g., show an error message)
-		alert('An error occurred while submitting the form. Please try again later.');
+		alert('Um erro ocorreu ao enviar o formulário, tente novamente mais tarde!');
+	      }
+	    });
+	    });
+	    });
+    </script>
+    <!-- Avoid JSON file to be shown to user -->
+    <script>
+	    $(document).ready(function() {
+	    $('#condominium-form').submit(function(event) {
+	    event.preventDefault(); // Prevent the form from submitting normally
+	    
+	    var form = $(this);
+	    var url = form.attr('action');
+	    
+	    $.ajax({
+	      type: 'POST',
+	      url: url,
+	      data: form.serialize(),
+	      dataType: 'json',
+	      success: function(data) {
+		// Handle the success response (e.g., show a success message)
+		alert('Formulário enviado com sucesso!');
+		window.location.href = 'index.html'; // Redirect to the main page
+	      },
+	      error: function(xhr, status, error) {
+		// Handle the error response (e.g., show an error message)
+		alert('Um erro ocorreu ao enviar o formulário, tente novamente mais tarde!');
 	      }
 	    });
 	    });
